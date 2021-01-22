@@ -1,0 +1,63 @@
+ COMANDOS -> CONSOLA - CONFIGURACAO BASICA  - LAB5-EX1:
+
+>>> PC-1
+Host-IP/Mask IP-Gateway
+
+ip 10.20.0.1/24 10.20.0.254
+save
+
+
+ >>> PC-2
+ip 193.136.212.254/25 193.136.212.129
+save
+
+
+ >>> R1    
+enable
+config terminal
+interface FastEthernet1/0
+ip address 10.20.0.254 255.255.255.0
+no shutdown
+exit
+interface Ethernet0/0
+ip address 193.136.212.1 255.255.255.128
+no shutdown
+exit
+ip route 193.136.212.128 255.255.255.128 193.136.212.126
+exit
+copy running-config startup-config
+
+
+ >>> R2  
+enable
+config terminal
+interface Ethernet0/0
+ip address 193.136.212.126 255.255.255.128
+no shutdown
+exit
+interface FastEthernet1/0
+ip address 193.136.212.129 255.255.255.128
+no shutdown
+exit
+ip route 10.20.0.0 255.255.255.0 193.136.212.1
+exit
+copy running-config startup-config
+
+
+
+
+(!!!! COPIEI DA FICHA 1 / FORA DO CONTEXTO)
+##### NO FINAL, EM CADA CONSOLA-Router: copy running-config startup-config  #####
+
+ >> Comandos Uteis:
+# show running-config
+VPCS:
+# ping <ip>
+# ip <ip_host/mask> <ip_router>
+# save
+# show ip
+Router Rede-Inicial:
+# ip route <destination_network (rede.0 final)> <subnet_mask(rede final)> <default_gateway(endereço interface[lado router] a que me ligo ao router que tem contacto com a rede final)>
+# show ip route
+# no <command> -> eliminar comandos inseridos
+

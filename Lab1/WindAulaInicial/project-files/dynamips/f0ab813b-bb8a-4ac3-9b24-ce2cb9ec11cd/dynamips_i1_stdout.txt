@@ -1,0 +1,12 @@
+cygwin warning:
+  MS-DOS style path detected: D:\Este PC\Ambiente de trabalho\LEI\2\xC2\xBA Ano\1\xC2\xBA Semestre\IRC\Meus Documentos\Aula Inicial\project-files\dynamips
+  Preferred POSIX equivalent is: /cygdrive/d/Este PC/Ambiente de trabalho/LEI/2\xC2\xBA Ano/1\xC2\xBA Semestre/IRC/Meus Documentos/Aula Inicial/project-files/dynamips
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+VM: Unable to store instance 'Ghost' in registry!
+VM Ghost: unable to create instance!
+VM: Unable to store instance 'Ghost' in registry!
+VM Ghost: unable to create instance!
+VM: Unable to store instance 'Ghost' in registry!
+VM Ghost: unable to create instance!

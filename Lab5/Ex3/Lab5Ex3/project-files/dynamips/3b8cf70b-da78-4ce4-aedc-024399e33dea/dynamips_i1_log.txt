@@ -1,0 +1,71 @@
+Dec 10 22:12:37.237 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Dec 10 22:12:37.237 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 44421.
+Dec 10 22:12:37.246 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 22:12:37.246 HYPERVISOR: exec_cmd: hypervisor working_dir /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips 
+Dec 10 22:12:37.246 GENERAL: working_dir=/home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips
+Dec 10 22:12:37.247 HYPERVISOR: exec_cmd: hypervisor working_dir /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/bb16d2a5-95af-497a-b85d-ca2ae6608630 
+Dec 10 22:12:37.247 GENERAL: working_dir=/home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/bb16d2a5-95af-497a-b85d-ca2ae6608630
+Dec 10 22:12:37.247 HYPERVISOR: exec_cmd: vm create R2 2 c2600 
+Dec 10 22:12:37.254 VM: VM R2 created.
+Dec 10 22:12:37.254 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5005 
+Dec 10 22:12:37.254 HYPERVISOR: exec_cmd: c2600 get_mac_addr R2 
+Dec 10 22:12:37.255 HYPERVISOR: exec_cmd: vm set_ios R2 /home/dario/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Dec 10 22:12:37.255 HYPERVISOR: exec_cmd: c2600 set_mac_addr R2 c802.2a4f.0000 
+Dec 10 22:12:37.256 HYPERVISOR: exec_cmd: vm set_nvram R2 200 
+Dec 10 22:12:37.256 HYPERVISOR: exec_cmd: vm set_ram R2 80 
+Dec 10 22:12:37.261 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 22:12:37.261 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-1FE-TX 
+Dec 10 22:12:37.261 HYPERVISOR: exec_cmd: vm set_sparse_mem R2 1 
+Dec 10 22:12:37.262 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 16 WIC-1T 
+Dec 10 22:12:37.845 HYPERVISOR: exec_cmd: nio create_udp udp-dffd661d-0985-47c5-bd9e-26e3f188b953 10006 127.0.0.1 10007 
+Dec 10 22:12:38.082 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-dffd661d-0985-47c5-bd9e-26e3f188b953 
+Dec 10 22:12:38.082 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 22:12:38.220 HYPERVISOR: exec_cmd: nio create_udp udp-9d0842a8-4054-4ef1-aa78-e126c4b4ffda 10010 127.0.0.1 10011 
+Dec 10 22:12:38.239 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-9d0842a8-4054-4ef1-aa78-e126c4b4ffda 
+Dec 10 22:12:38.240 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 22:12:46.762 HYPERVISOR: exec_cmd: vm create Ghost 0 c2600 
+Dec 10 22:12:46.762 VM: VM Ghost created.
+Dec 10 22:12:46.771 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/dario/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Dec 10 22:12:46.772 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 10 22:12:46.775 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost 
+Dec 10 22:12:46.787 HYPERVISOR: exec_cmd: vm set_ram Ghost 80 
+Dec 10 22:12:46.809 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 10 22:12:46.862 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Dec 10 22:12:46.890 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 10 22:12:47.178 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 10 22:12:47.179 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 10 22:12:47.502 VM: VM Ghost shutdown.
+Dec 10 22:12:47.503 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Dec 10 22:12:47.503 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 10 22:12:47.503 VM: VM Ghost destroyed.
+Dec 10 22:12:47.504 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Dec 10 22:12:47.505 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost 
+Dec 10 22:12:47.505 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 22:12:47.507 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Dec 10 22:12:47.512 HYPERVISOR: exec_cmd: vm start R2 
+Dec 10 22:12:47.513 GHOST: loaded ghost image /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=11) at addr=0x7fa513000000 (size=0x5000000)
+Dec 10 22:12:47.513 GHOST: loaded image /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost successfully.
+Dec 10 22:55:05.483 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 22:55:05.484 HYPERVISOR: exec_cmd: vm stop R2 
+Dec 10 22:55:05.568 GHOST: unloaded ghost image /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=11) at addr=0x7fa513000000 (size=0x5000000)
+Dec 10 22:55:05.703 VM: VM R2 shutdown.
+Dec 10 22:55:05.708 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 10 22:56:16.093 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Dec 10 22:56:16.095 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost 
+Dec 10 22:56:16.096 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 22:56:16.096 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Dec 10 22:56:16.105 HYPERVISOR: exec_cmd: vm start R2 
+Dec 10 22:56:16.106 GHOST: loaded ghost image /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=11) at addr=0x7fa513000000 (size=0x5000000)
+Dec 10 22:56:16.106 GHOST: loaded image /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost successfully.
+Dec 10 23:29:59.621 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 23:29:59.637 HYPERVISOR: exec_cmd: vm stop R2 
+Dec 10 23:29:59.711 GHOST: unloaded ghost image /home/dario/Desktop/IRC/Lab5/Ex2/Lab5Ex2/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=11) at addr=0x7fa513000000 (size=0x5000000)
+Dec 10 23:29:59.854 VM: VM R2 shutdown.
+Dec 10 23:29:59.862 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 10 23:30:00.720 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 23:30:00.728 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 10 23:30:00.759 HYPERVISOR: exec_cmd: vm delete R2 
+Dec 10 23:30:00.759 VM: VM R2 destroyed.
+Dec 10 23:30:00.942 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 10 23:30:01.130 HYPERVISOR: Stopped.
+Dec 10 23:30:01.130 GENERAL: reset done.

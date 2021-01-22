@@ -1,0 +1,21 @@
+ TEORIA CONFIGURACAO BASICA:
+
+ ***** Rede: 10.6.0.0/24 *****  >>> Dividir em 4 sub-redes: /24 > /26
+NetMask Address Inicial: 255.255.255.0   ---->  x.x.x.0000 0000
+
+ +++  NetMask Address Final: 255.255.255.192  OU /26  +++
+>> Rede (Network Address): 10.6.0.0/26  |  x.x.x.(00)00 0000     | Entre PC1 e R1
+Gama: 10.6.0.1 a 10.6.0.62      (2⁶ -2 = 64 -2 = 62 Hosts Disponiveis)
+Brodcast Address: 10.6.0.63
+
+>> Rede (Network Address): 10.6.0.64/26  |  x.x.x.(01)00 0000      | Entre R1 e R2, passando por NETem
+Gama: 10.6.0.65 a 10.6.0.126      (2⁶ -1 -1 = 62 Hosts Disponiveis)
+Brodcast Address: 10.6.0.127
+
+>> Rede (Network Address): 10.6.0.128/26  |  x.x.x.(10)00 0000     | Entre R2 e PC1
+Gama: 10.6.0.129 a 10.6.0.190      (2⁶ -2 = 62 Hosts Disponiveis)
+Brodcast Address: 10.6.0.191
+
+>> Rede (Network Address): 10.6.0.192/26  |  x.x.x.(00)00 0000    (NAO VAI SER UTILIZADO)
+Gama: 10.6.0.193 a 10.6.0.254      (2⁶ -1 -1 = 62 Hosts Disponiveis)
+Brodcast Address: 10.6.0.255

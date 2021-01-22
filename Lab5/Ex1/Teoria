@@ -1,0 +1,23 @@
+ TEORIA CONFIGURACAO BASICA - LAB5-EX1:
+
+ ***** Rede: 10.20.0.0/24 ***** 
+> NetMask Address Final: 255.255.255.0 OU /24
+>> Rede (Network Address): 10.20.0.0/24  |  x.x.x.0000 0000     | Entre PC1 e R1
+Gama: 10.20.0.1 a 10.20.0.254      (256 -2 = 254 Hosts Disponiveis)
+Brodcast Address: 10.20.0.255
+
+
+
+ ***** Rede: 193.136.212.0/25 *****  >>> Dividir em 2 sub-redes: /24 > /25
+NetMask Address: 255.255.255.128 OU /25  ---->  x.x.x.(?)000 0000
+
+
+>> Rede (Network Address): 193.136.212.0/25 |  x.x.x.(0)000 0000     | Entre R1 e R2
+Gama: 193.136.212.1 a 193.136.212.126      (256/2 -2 = 128 -2 = 126 Hosts Disponiveis)
+Brodcast Address: 193.136.212.127
+
+>> Rede (Network Address): 193.136.212.128/25  |  x.x.x.(1)000 0000     | Entre R2 e PC2
+Gama: 193.136.212.129 a 193.136.212.254      (256/2 -2 = 126 Hosts Disponiveis)
+Brodcast Address: 193.136.212.255
+
+

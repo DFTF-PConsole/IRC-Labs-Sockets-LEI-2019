@@ -1,0 +1,51 @@
+Dec 10 21:36:36.836 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Dec 10 21:36:36.836 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 53083.
+Dec 10 21:36:36.846 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 21:36:36.847 HYPERVISOR: exec_cmd: hypervisor working_dir /home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips 
+Dec 10 21:36:36.847 GENERAL: working_dir=/home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips
+Dec 10 21:36:36.847 HYPERVISOR: exec_cmd: hypervisor working_dir /home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips/5b0633ab-7cd2-46a3-8588-d13f77e2677c 
+Dec 10 21:36:36.847 GENERAL: working_dir=/home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips/5b0633ab-7cd2-46a3-8588-d13f77e2677c
+Dec 10 21:36:36.847 HYPERVISOR: exec_cmd: vm create R2 2 c2600 
+Dec 10 21:36:36.847 VM: VM R2 created.
+Dec 10 21:36:36.847 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5005 
+Dec 10 21:36:36.847 HYPERVISOR: exec_cmd: c2600 get_mac_addr R2 
+Dec 10 21:36:36.848 HYPERVISOR: exec_cmd: vm set_ios R2 /home/dario/GNS3/images/IOS/c2600-is-mz.123-17a.bin 
+Dec 10 21:36:36.848 HYPERVISOR: exec_cmd: c2600 set_mac_addr R2 c802.2030.0000 
+Dec 10 21:36:36.849 HYPERVISOR: exec_cmd: vm set_nvram R2 200 
+Dec 10 21:36:36.849 HYPERVISOR: exec_cmd: vm set_ram R2 80 
+Dec 10 21:36:36.849 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:36:36.849 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-1FE-TX 
+Dec 10 21:36:36.850 HYPERVISOR: exec_cmd: vm set_sparse_mem R2 1 
+Dec 10 21:36:36.850 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 16 WIC-1T 
+Dec 10 21:36:37.221 HYPERVISOR: exec_cmd: nio create_udp udp-56fe028f-a7c1-4104-94a6-42363a99a294 10008 127.0.0.1 10009 
+Dec 10 21:36:37.431 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-56fe028f-a7c1-4104-94a6-42363a99a294 
+Dec 10 21:36:37.431 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:36:37.475 HYPERVISOR: exec_cmd: nio create_udp udp-86e2666d-bde4-4e1f-a734-63225dac0186 10012 127.0.0.1 10013 
+Dec 10 21:36:37.476 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-86e2666d-bde4-4e1f-a734-63225dac0186 
+Dec 10 21:36:37.476 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:36:47.637 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Dec 10 21:36:47.639 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost 
+Dec 10 21:36:47.651 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:36:47.651 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Dec 10 21:36:47.655 HYPERVISOR: exec_cmd: vm start R2 
+Dec 10 21:36:47.657 GHOST: loaded ghost image /home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=11) at addr=0x7f6fa3000000 (size=0x5000000)
+Dec 10 21:36:47.657 GHOST: loaded image /home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost successfully.
+Dec 10 21:37:17.913 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 10 21:39:54.003 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:39:54.005 HYPERVISOR: exec_cmd: vm stop R2 
+Dec 10 21:39:54.092 GHOST: unloaded ghost image /home/dario/Desktop/IRC/Lab5/Ex1/Lab5Ex1/project-files/dynamips/c2600-is-mz.123-17a.bin-80.ghost (fd=11) at addr=0x7f6fa3000000 (size=0x5000000)
+Dec 10 21:39:54.325 VM: VM R2 shutdown.
+Dec 10 21:39:54.327 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 10 21:39:57.616 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:39:57.622 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 0 
+Dec 10 21:39:57.623 HYPERVISOR: exec_cmd: nio delete udp-56fe028f-a7c1-4104-94a6-42363a99a294 
+Dec 10 21:40:01.782 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:40:01.783 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 1 0 
+Dec 10 21:40:01.785 HYPERVISOR: exec_cmd: nio delete udp-86e2666d-bde4-4e1f-a734-63225dac0186 
+Dec 10 21:40:02.152 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 10 21:40:02.152 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 10 21:40:02.153 HYPERVISOR: exec_cmd: vm delete R2 
+Dec 10 21:40:02.153 VM: VM R2 destroyed.
+Dec 10 21:40:02.180 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 10 21:40:02.653 HYPERVISOR: Stopped.
+Dec 10 21:40:02.653 GENERAL: reset done.

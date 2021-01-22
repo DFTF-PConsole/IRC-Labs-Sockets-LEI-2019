@@ -1,0 +1,8 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00425930
+eax=FFFFF000 ebx=204D6438 ecx=204D6438 edx=00000000 esi=201B31E0 edi=00000001
+ebp=201B29F0 esp=FADBCD50 program=D:\Install\Apps\Informatica\GNS3\dynamips\dynamips.EXE, pid 11028, thread unknown (0x3DC4)
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+201B29F0  00425930 (80005FC8, 00000000, 82CBBE80, 002FC440)
+End of stack trace

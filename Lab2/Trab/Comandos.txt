@@ -1,0 +1,61 @@
+ COMANDOS -> CONSOLA - CONFIGURACAO BASICA:
+
+>>> PC-1
+ip 10.6.0.1/26 10.6.0.2
+save
+
+
+ >>> PC-2
+ip 10.6.0.129/26 10.6.0.130
+save
+
+
+ >>> R1    
+enable
+config terminal
+interface FastEthernet1/0
+ip address 10.6.0.2 255.255.255.192
+no shutdown
+exit
+interface Ethernet0/0
+ip address 10.6.0.65 255.255.255.192
+no shutdown
+exit
+ip route 10.6.0.128 255.255.255.192 10.6.0.66
+exit
+copy running-config startup-config
+
+
+ >>> R2  
+enable
+config terminal
+interface Ethernet0/0
+ip address 10.6.0.66 255.255.255.192
+no shutdown
+exit
+interface FastEthernet1/0
+ip address 10.6.0.130 255.255.255.192
+no shutdown
+exit
+ip route 10.6.0.0 255.255.255.192 10.6.0.65
+exit
+copy running-config startup-config
+
+
+
+
+(!!!! COPIEI DA FICHA 1 / FORA DO CONTEXTO)
+##### NO FINAL, EM CADA CONSOLA-Router: copy running-config startup-config  #####
+
+ >> Comandos Uteis:
+# show running-config
+VPCS:
+# ping <ip>
+# ip <ip_host/mask> <ip_router>
+# save
+# show ip
+Router Rede-Inicial:
+# ip route <destination_network (rede.0 final)> <subnet_mask(rede final)> <default_gateway(endereço interface[lado router] a que me ligo ao router que tem contacto com a rede final)>
+# show ip route
+# no <command> -> eliminar comandos inseridos
+
